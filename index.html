@@ -1,0 +1,2486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DET 145+ — 45-Minute Tactical Booster</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --green: #16a34a;
+      --green-bg: #dcfce7;
+      --green-border: #86efac;
+      --blue: #2563eb;
+      --blue-bg: #dbeafe;
+      --blue-border: #93c5fd;
+      --amber: #d97706;
+      --amber-bg: #fef3c7;
+      --amber-border: #fcd34d;
+      --red: #dc2626;
+      --red-bg: #fee2e2;
+      --red-border: #fca5a5;
+      --slate-bg: #f1f5f9;
+      --shadow: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+    }
+
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 12px 16px 8px;
+    }
+
+    .header-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-badge {
+      background: var(--green);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .header-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: var(--slate-bg);
+      color: var(--text);
+    }
+
+    .pill-green {
+      background: var(--green-bg);
+      border-color: var(--green-border);
+      color: #166534;
+    }
+
+    .pill-blue {
+      background: var(--blue-bg);
+      border-color: var(--blue-border);
+      color: #1e40af;
+    }
+
+    .pill-amber {
+      background: var(--amber-bg);
+      border-color: var(--amber-border);
+      color: #92400e;
+    }
+
+    .pill-red {
+      background: var(--red-bg);
+      border-color: var(--red-border);
+      color: #991b1b;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+    }
+
+    .nav-tab {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 12px;
+      border-radius: 9px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-tab:hover {
+      border-color: var(--blue-border);
+      color: var(--text);
+    }
+
+    .nav-tab.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #ffffff;
+    }
+
+    .nav-tab .done-dot {
+      display: none;
+      font-size: 11px;
+    }
+
+    .nav-tab.completed .done-dot {
+      display: inline;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 19px;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+
+    .callout {
+      border-radius: 10px;
+      padding: 13px 15px;
+      margin-bottom: 14px;
+      border: 1px solid var(--blue-border);
+      background: var(--blue-bg);
+      color: #1e3a8a;
+      font-size: 14px;
+    }
+
+    .callout-green {
+      border-color: var(--green-border);
+      background: var(--green-bg);
+      color: #14532d;
+    }
+
+    .callout-amber {
+      border-color: var(--amber-border);
+      background: var(--amber-bg);
+      color: #78350f;
+    }
+
+    .btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.14s ease;
+    }
+
+    .btn:hover:not(:disabled) {
+      background: var(--slate-bg);
+    }
+
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: #1d4ed8;
+    }
+
+    .btn-green {
+      background: var(--green);
+      border-color: var(--green);
+      color: #ffffff;
+    }
+
+    .btn-green:hover:not(:disabled) {
+      background: #15803d;
+    }
+
+    .btn-red {
+      background: var(--red);
+      border-color: var(--red);
+      color: #ffffff;
+    }
+
+    .btn-red:hover:not(:disabled) {
+      background: #b91c1c;
+    }
+
+    .btn-sm {
+      padding: 5px 10px;
+      font-size: 12.5px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    /* Checklist */
+    .checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      padding: 11px 13px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.12s ease, border-color 0.12s ease;
+      background: #ffffff;
+    }
+
+    .check-item:hover {
+      background: var(--slate-bg);
+    }
+
+    .check-item.checked {
+      background: #f0fdf4;
+      border-color: var(--green-border);
+    }
+
+    .check-item input[type="checkbox"] {
+      margin-top: 3px;
+      width: 17px;
+      height: 17px;
+      accent-color: var(--green);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    /* Plan summary table */
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .plan-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      background: var(--slate-bg);
+      cursor: pointer;
+      transition: border-color 0.12s ease;
+    }
+
+    .plan-box:hover {
+      border-color: var(--blue);
+    }
+
+    /* Flashcard Drill */
+    .drill-stage {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 20px;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .drill-progress-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .timer-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-bg);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .timer-fill {
+      height: 100%;
+      width: 100%;
+      background: var(--green);
+      transition: width 0.1s linear, background-color 0.2s ease;
+    }
+
+    .word-display {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin: 14px 0 8px;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    .drill-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin: 18px 0 12px;
+      flex-wrap: wrap;
+    }
+
+    .drill-actions .btn {
+      min-width: 165px;
+      padding: 12px 20px;
+      font-size: 15px;
+    }
+
+    .feedback-banner {
+      margin-top: 14px;
+      padding: 12px 15px;
+      border-radius: 10px;
+      text-align: left;
+      font-size: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .stat-card {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--slate-bg);
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* C-Test */
+    .ctest-text {
+      font-size: 16px;
+      line-height: 2.05;
+      background: var(--slate-bg);
+      padding: 16px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+
+    .blank-wrap {
+      display: inline-flex;
+      align-items: baseline;
+      white-space: nowrap;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .blank-input {
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 2px 6px;
+      margin: 0 2px;
+      border: 1.5px solid #94a3b8;
+      border-radius: 6px;
+      background: #ffffff;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+
+    .blank-input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+
+    .blank-input.correct {
+      border-color: var(--green);
+      background: var(--green-bg);
+      color: #14532d;
+    }
+
+    .blank-input.wrong {
+      border-color: var(--red);
+      background: var(--red-bg);
+      color: #991b1b;
+    }
+
+    .hint-tag {
+      font-size: 11px;
+      color: var(--blue);
+      font-weight: 600;
+      margin-left: 2px;
+    }
+
+    /* Writing */
+    .connector-bank {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0 14px;
+    }
+
+    .chip-btn {
+      border: 1px solid var(--blue-border);
+      background: var(--blue-bg);
+      color: #1e40af;
+      border-radius: 999px;
+      padding: 4px 11px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .chip-btn:hover {
+      background: #bfdbfe;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1.5px solid #cbd5e1;
+      font-family: inherit;
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--text);
+      resize: vertical;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.14);
+    }
+
+    .grader-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 10px;
+      align-items: center;
+    }
+
+    .svg-frame {
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    details {
+      margin-top: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 12px;
+      background: var(--slate-bg);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13.5px;
+      color: var(--blue);
+    }
+
+    .model-box {
+      margin-top: 8px;
+      font-size: 13.5px;
+      color: var(--text);
+      background: #ffffff;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    /* Speaking */
+    .pacer-box {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      background: var(--slate-bg);
+      margin-top: 10px;
+    }
+
+    .phase-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin: 12px 0;
+    }
+
+    .phase-step {
+      padding: 8px 6px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .phase-step.active-phase {
+      background: var(--blue-bg);
+      border-color: var(--blue);
+      color: #1e3a8a;
+    }
+
+    .phase-step.target-phase {
+      background: var(--green-bg);
+      border-color: var(--green);
+      color: #14532d;
+    }
+
+    /* Dictation */
+    .dictation-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 12px;
+      background: #ffffff;
+    }
+
+    .dictation-input {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1.5px solid #cbd5e1;
+      font-family: inherit;
+      font-size: 14.5px;
+      margin: 8px 0;
+    }
+
+    .diff-token {
+      display: inline-block;
+      padding: 1px 5px;
+      margin: 2px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .diff-ok {
+      background: var(--green-bg);
+      color: #166534;
+    }
+
+    .diff-miss {
+      background: var(--red-bg);
+      color: #991b1b;
+    }
+
+    .diff-extra {
+      background: var(--amber-bg);
+      color: #92400e;
+      text-decoration: line-through;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 640px) {
+      .phase-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .word-display {
+        font-size: 28px;
+      }
+      .drill-actions .btn {
+        min-width: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="brand">
+          <span class="brand-badge">DET 145+</span>
+          <div>
+            <h1 class="brand-title">DET 145+ Tactical Booster</h1>
+            <div class="brand-sub">Target: 130+ · High-Band Adaptive Practice (140-150) · High-ROI Mechanics</div>
+          </div>
+        </div>
+        <div class="header-controls">
+          <span class="pill pill-blue" id="planPill">Total Plan: 45 min</span>
+          <span class="pill pill-green" id="modulesPill">Modules Completed: 0 / 5</span>
+          <button class="btn btn-sm" id="resetAllBtn" type="button" title="Reset all saved answers and progress">Reset Progress</button>
+        </div>
+      </div>
+
+      <nav class="nav-tabs" aria-label="Training Modules">
+        <button class="nav-tab active" data-tab="overview" type="button">
+          <span>⚡ Setup & Rules (5m)</span><span class="done-dot">✅</span>
+        </button>
+        <button class="nav-tab" data-tab="vocab" type="button">
+          <span>🎯 1. Read & Select (10m)</span><span class="done-dot">✅</span>
+        </button>
+        <button class="nav-tab" data-tab="ctest" type="button">
+          <span>🧩 2. C-Test (10m)</span><span class="done-dot">✅</span>
+        </button>
+        <button class="nav-tab" data-tab="writing" type="button">
+          <span>✍️ 3. Writing (12m)</span><span class="done-dot">✅</span>
+        </button>
+        <button class="nav-tab" data-tab="speaking" type="button">
+          <span>🎙️ 4. Speaking & Dictation (8m)</span><span class="done-dot">✅</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- TAB 1: OVERVIEW & SETUP -->
+    <section id="tab-overview" class="tab-panel active">
+      <div class="card">
+        <div class="card-header">
+          <h2>Why Practice Test #2 Felt Harder (and Why That Is Good News)</h2>
+          <span class="pill pill-green">Adaptive IRT Scoring</span>
+        </div>
+        <div class="callout">
+          <strong>30-Second Truth:</strong> The Duolingo English Test is <strong>computer-adaptive</strong>. Because you already scored <strong>140-150</strong> (IELTS 7.5-8.0, top 5-10%, well above a <strong>130</strong> target score), the algorithm intentionally climbs into obscure C2 vocabulary until you miss roughly 40% of the hardest items. Feeling challenged on rare words does <strong>not</strong> mean your score dropped. It means the engine placed you in the top bracket.
+        </div>
+        <p class="muted">You do not need to memorize dictionary lists. These 4 mechanical drills lock in an extra <strong>+5 to +15 points</strong> in 45 minutes by eliminating avoidable penalties and maximizing AI-graded Production scores:</p>
+        <div class="plan-grid">
+          <div class="plan-box" data-jump="vocab">
+            <strong>1. Read & Select (10 min)</strong>
+            <div class="muted">30-card trap drill to kill the heavy fake-word penalty.</div>
+          </div>
+          <div class="plan-box" data-jump="ctest">
+            <strong>2. Read & Complete (10 min)</strong>
+            <div class="muted">3 timed C-Test passages with anchor-sentence method.</div>
+          </div>
+          <div class="plan-box" data-jump="writing">
+            <strong>3. Writing Booster (12 min)</strong>
+            <div class="muted">Photo + Interactive Writing with live AI-rubric grader.</div>
+          </div>
+          <div class="plan-box" data-jump="speaking">
+            <strong>4. Speaking & Dictation (8 min)</strong>
+            <div class="muted">35s conversational pacer + 4 C1 audio dictations.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Mandatory 2026 Proctoring & Setup Checklist (5 min)</h2>
+          <span class="pill pill-amber" id="checklistStatusPill">0 / 8 Checked</span>
+        </div>
+        <p class="muted">One rule slip invalidates certification and forces a retake. Check off all 8 items before launching the real DET app:</p>
+
+        <div class="checklist" id="securityChecklist">
+          <label class="check-item">
+            <input type="checkbox" data-check="0" />
+            <span><strong>1. Valid Passport on desk:</strong> Keep your physical passport ready for the pre-test ID photo check.</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="1" />
+            <span><strong>2. Laptop plugged in & background apps quit:</strong> Plug in power, open only the official DET Desktop App, and completely quit Chrome, WhatsApp, Grammarly, FaceTime, and Notion.</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="2" />
+            <span><strong>3. Mandatory Smartphone 2nd Camera Setup:</strong> Plug your phone into a charger, turn on <strong>Airplane Mode + Wi-Fi ON</strong> (or strict Do Not Disturb so zero calls or WhatsApp banners break the video stream), and prop it <strong>horizontally</strong> on a heavy mug or books ~1 arm's length to the side so it films your <strong>screen + keyboard + head &amp; shoulders</strong>.</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="3" />
+            <span><strong>4. 360° Room Scan + Both Ears Visible:</strong> Complete the phone room &amp; ear scan at startup. Keep hair tucked behind both ears for the entire test, with zero headphones or earbuds.</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="4" />
+            <span><strong>5. Keep eyes on the screen:</strong> Do not look around the room or stare downward for long stretches (normal brief glances at the keyboard while typing are fine).</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="5" />
+            <span><strong>6. Silent reading = lips still:</strong> Never whisper or mouth Reading/Writing questions aloud (only speak during Speaking tasks).</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="6" />
+            <span><strong>7. Closed door, quiet room:</strong> Ensure nobody enters the room for 60 uninterrupted minutes.</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="7" />
+            <span><strong>8. US Spelling Lock:</strong> Keep US spelling consistent everywhere (<code>organize</code>, <code>behavior</code>, <code>center</code>, <code>program</code>, <code>neighborhood</code>).</span>
+          </label>
+        </div>
+
+        <div class="footer-nav">
+          <button class="btn btn-sm" id="markOverviewBtn" type="button">Mark Module 1 Complete</button>
+          <button class="btn btn-primary" data-jump="vocab" type="button">Start Module 1: Read & Select ➔</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: READ & SELECT -->
+    <section id="tab-vocab" class="tab-panel">
+      <div class="card">
+        <div class="card-header">
+          <h2>Module 1 · Read & Select Trap Drill (10 min · 30 Words)</h2>
+          <span class="pill pill-blue" id="vocabDonePill">In Progress</span>
+        </div>
+
+        <div class="callout callout-amber">
+          <strong>Golden Rule (Zero Luck):</strong> Clicking <strong>YES</strong> on an invented fake word carries a heavy penalty (<strong>-1.5 pts</strong> in this drill). Skipping an obscure real word by clicking <strong>NO</strong> barely affects your score. <strong>Only click YES if 100% sure. Any doubt ➔ click NO.</strong>
+        </div>
+
+        <div class="drill-stage" id="vocabStage">
+          <div class="drill-progress-row">
+            <span id="vocabProgressText">Card 1 / 30</span>
+            <span id="vocabTimerText">5.0s pace</span>
+          </div>
+          <div class="timer-track">
+            <div class="timer-fill" id="vocabTimerBar"></div>
+          </div>
+
+          <div class="word-display" id="vocabWord">corroborate</div>
+          <div class="muted">Is this a real English word with exact correct spelling? (Shortcuts: <code>Y</code> = Yes · <code>N</code> = No · <code>Enter</code>/<code>Space</code> = Next)</div>
+
+          <div class="drill-actions">
+            <button class="btn btn-green" id="btnVocabYes" type="button">✓ YES, Real Word (Y)</button>
+            <button class="btn btn-red" id="btnVocabNo" type="button">✗ NO, Fake / Doubt (N)</button>
+          </div>
+
+          <div id="vocabFeedback" class="feedback-banner hidden"></div>
+          <div style="margin-top: 12px;">
+            <button class="btn btn-primary hidden" id="btnVocabNext" type="button">Next Word ➔</button>
+          </div>
+        </div>
+
+        <div id="vocabSummary" class="hidden">
+          <h3>Read & Select Drill Results</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-val" id="statRealCaught">0 / 15</div>
+              <div class="stat-label">Real C1 Words Caught</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val" id="statFakeAvoided">0 / 15</div>
+              <div class="stat-label">Fake Traps Avoided</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val" id="statFakeClicked">0</div>
+              <div class="stat-label">Fake Words Clicked (-1.5 each)</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val" id="statVocabBand">145</div>
+              <div class="stat-label">Estimated Band</div>
+            </div>
+          </div>
+          <div id="vocabMissList"></div>
+          <div class="footer-nav">
+            <button class="btn" id="btnVocabRestart" type="button">↻ Reshuffle & Retry 30 Cards</button>
+            <button class="btn btn-primary" data-jump="ctest" type="button">Next: C-Test Passages ➔</button>
+          </div>
+        </div>
+
+        <div class="footer-nav" id="vocabFooterNav">
+          <button class="btn btn-sm" id="btnVocabRestartInline" type="button">↻ Reshuffle Cards</button>
+          <div>
+            <button class="btn btn-sm" id="markVocabBtn" type="button">Mark Module 2 Complete</button>
+            <button class="btn btn-primary btn-sm" data-jump="ctest" type="button">Next: C-Test ➔</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: C-TEST -->
+    <section id="tab-ctest" class="tab-panel">
+      <div class="card">
+        <div class="card-header">
+          <h2>Module 2 · Read & Complete / C-Test (10 min · 3 Passages)</h2>
+          <span class="pill pill-blue" id="ctestScorePill">0 / 30 Correct</span>
+        </div>
+
+        <div class="callout">
+          <strong>3-Step C-Test Method:</strong> (1) Read the <strong>first and last full sentences</strong> first (never blanked, giving exact topic &amp; tense). (2) Fill obvious <strong>connector/function words</strong> first (<code>though</code>, <code>whereas</code>, <code>however</code>, <code>addition</code>). (3) Type <strong>either the missing ending</strong> (<code>ough</code>) <strong>or the full word</strong> (<code>though</code>) — both are accepted here!
+        </div>
+
+        <div id="ctestContainer"></div>
+
+        <div class="footer-nav">
+          <button class="btn btn-sm" id="markCtestBtn" type="button">Mark Module 3 Complete</button>
+          <button class="btn btn-primary" data-jump="writing" type="button">Next: Writing Booster ➔</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: WRITING BOOSTER -->
+    <section id="tab-writing" class="tab-panel">
+      <div class="card">
+        <div class="card-header">
+          <h2>Module 3 · Writing Booster (12 min · Live AI-Rubric Grader)</h2>
+          <span class="pill pill-blue" id="writingStatusPill">2 Exercises</span>
+        </div>
+
+        <div class="callout callout-green">
+          <strong>Zero Luck Factor:</strong> Production subscores reward structured length, C1 transition variety, complex clauses, and clean US spelling. Click any connector chip below to insert it at your cursor in the active box:
+        </div>
+
+        <div class="connector-bank" id="connectorBank">
+          <button class="chip-btn" type="button" data-phrase="At first glance, ">At first glance,</button>
+          <button class="chip-btn" type="button" data-phrase="Closer inspection suggests that ">Closer inspection suggests that</button>
+          <button class="chip-btn" type="button" data-phrase="Admittedly, ">Admittedly,</button>
+          <button class="chip-btn" type="button" data-phrase="Nevertheless, ">Nevertheless,</button>
+          <button class="chip-btn" type="button" data-phrase="Specifically, ">Specifically,</button>
+          <button class="chip-btn" type="button" data-phrase="For instance, ">For instance,</button>
+          <button class="chip-btn" type="button" data-phrase="Consequently, ">Consequently,</button>
+          <button class="chip-btn" type="button" data-phrase="Ultimately, ">Ultimately,</button>
+        </div>
+
+        <!-- Exercise A: Photo -->
+        <div class="card" style="box-shadow: none; background: #fbfdff;">
+          <div class="card-header">
+            <h3>Exercise A · Write About the Photo (1:00 · Target 35-50 words)</h3>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span class="pill" id="photoTimerDisplay">01:00</span>
+              <button class="btn btn-sm btn-primary" id="photoTimerBtn" type="button">▶ Start 1:00 Timer</button>
+            </div>
+          </div>
+
+          <div class="svg-frame" aria-label="Workspace scene with two university researchers looking at a laptop chart near a rainy window and glass board with sticky notes">
+            <svg viewBox="0 0 600 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+              <!-- Wall & Window -->
+              <rect width="600" height="260" fill="#eef2ff" />
+              <rect x="28" y="18" width="210" height="145" rx="6" fill="#cbd5e1" stroke="#64748b" stroke-width="3" />
+              <!-- Rainy sky outside -->
+              <rect x="34" y="24" width="198" height="133" rx="3" fill="#94a3b8" />
+              <line x1="133" y1="24" x2="133" y2="157" stroke="#64748b" stroke-width="3" />
+              <line x1="34" y1="90" x2="232" y2="90" stroke="#64748b" stroke-width="3" />
+              <!-- Rain streaks -->
+              <g stroke="#e2e8f0" stroke-width="1.5" opacity="0.8">
+                <line x1="55" y1="35" x2="48" y2="55" />
+                <line x1="90" y1="45" x2="83" y2="68" />
+                <line x1="160" y1="38" x2="153" y2="60" />
+                <line x1="200" y1="52" x2="193" y2="75" />
+                <line x1="72" y1="104" x2="65" y2="128" />
+                <line x1="175" y1="108" x2="168" y2="134" />
+              </g>
+              <!-- Glass board in background with sticky notes -->
+              <rect x="360" y="24" width="212" height="118" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5" />
+              <rect x="378" y="42" width="34" height="30" fill="#fde047" />
+              <rect x="422" y="42" width="34" height="30" fill="#86efac" />
+              <rect x="466" y="42" width="34" height="30" fill="#93c5fd" />
+              <rect x="378" y="84" width="34" height="30" fill="#fca5a5" />
+              <path d="M430 112 L462 94 L495 102 L542 74" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" />
+              <circle cx="542" cy="74" r="4" fill="#2563eb" />
+              <!-- Desk -->
+              <rect x="55" y="185" width="490" height="16" rx="4" fill="#92400e" />
+              <rect x="85" y="201" width="14" height="59" fill="#475569" />
+              <rect x="500" y="201" width="14" height="59" fill="#475569" />
+              <!-- Left Person (Woman leaning slightly forward) -->
+              <circle cx="195" cy="108" r="21" fill="#f1c27d" />
+              <path d="M174 108 Q174 80 198 82 Q218 84 216 112 Q212 96 196 95 Q180 95 174 108 Z" fill="#451a03" />
+              <path d="M168 185 Q172 135 198 135 Q224 135 232 185 Z" fill="#2563eb" />
+              <!-- Right Person (Man pointing at screen) -->
+              <circle cx="332" cy="104" r="21" fill="#e0ac69" />
+              <path d="M312 100 Q314 78 334 78 Q354 78 352 102 Q342 90 330 90 Q318 90 312 100 Z" fill="#1e293b" />
+              <path d="M298 185 Q306 132 334 132 Q364 132 370 185 Z" fill="#0f766e" />
+              <line x1="305" y1="152" x2="274" y2="164" stroke="#0f766e" stroke-width="11" stroke-linecap="round" />
+              <!-- Laptop on Desk -->
+              <polygon points="222,185 288,185 278,144 212,144" fill="#334155" />
+              <polygon points="227,180 282,180 274,149 218,149" fill="#e0f2fe" />
+              <rect x="220" y="182" width="78" height="4" fill="#64748b" />
+              <!-- Coffee Mug & Notebook -->
+              <rect x="392" y="166" width="18" height="19" rx="3" fill="#dc2626" />
+              <rect x="424" y="178" width="54" height="7" rx="2" fill="#facc15" />
+            </svg>
+          </div>
+
+          <p class="muted"><strong>Formula:</strong> (1) Main action (<em>"This scene depicts..."</em>) + (2) Background details (<em>"In the background..."</em>) + (3) Logical inference (<em>"It appears that..." / "Presumably..."</em>).</p>
+          <textarea id="photoInput" placeholder="Describe the photo in 3 crisp sentences (35-50 words)..."></textarea>
+          <div class="grader-bar" id="photoGrader"></div>
+
+          <details>
+            <summary>Show 150+ Model Sample</summary>
+            <div class="model-box">
+              This scene depicts two colleagues collaborating closely over a laptop on a wooden desk inside a bright workspace. In the background, colorful sticky notes and an upward-trending line chart cover a glass whiteboard beside a rain-streaked window. Presumably, they are reviewing project data and refining their strategy for an upcoming presentation.
+            </div>
+          </details>
+        </div>
+
+        <!-- Exercise B: Interactive Writing -->
+        <div class="card" style="box-shadow: none; background: #fbfdff; margin-bottom: 0;">
+          <div class="card-header">
+            <h3>Exercise B · Interactive Writing (5:00 Part 1 + 3:00 Follow-up)</h3>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span class="pill" id="iw1TimerDisplay">05:00</span>
+              <button class="btn btn-sm btn-primary" id="iw1TimerBtn" type="button">▶ Start 5:00 Timer</button>
+            </div>
+          </div>
+
+          <div class="callout" style="margin-bottom: 10px;">
+            <strong>Part 1 Prompt (Target 100-130 words):</strong> Many universities now allow students to use AI tools for brainstorming and editing assignments, while others restrict them strictly. Do you think universities should integrate these tools into coursework or limit their use? Explain your reasoning.
+          </div>
+          <textarea id="iw1Input" style="min-height: 155px;" placeholder="Write 100-130 words using 3+ C1 connectors and clean US spelling. Save 25 seconds at the end to fix typos..."></textarea>
+          <div class="grader-bar" id="iw1Grader"></div>
+
+          <div style="margin-top: 12px;">
+            <button class="btn btn-green btn-sm" id="unlockPart2Btn" type="button">Finish Part 1 / Unlock Part 2 Follow-up ➔</button>
+          </div>
+
+          <div id="iw2Section" class="hidden" style="margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--border);">
+            <div class="card-header">
+              <h3>Part 2 Follow-up (3:00 · Target 65-85 words)</h3>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <span class="pill" id="iw2TimerDisplay">03:00</span>
+                <button class="btn btn-sm btn-primary" id="iw2TimerBtn" type="button">▶ Start 3:00 Timer</button>
+              </div>
+            </div>
+            <div class="callout" style="margin-bottom: 10px;">
+              <strong>Follow-up Prompt:</strong> How might employers evaluate graduates differently if AI tools become standard in university education?
+            </div>
+            <textarea id="iw2Input" placeholder="Write 65-85 focused words answering the follow-up..."></textarea>
+            <div class="grader-bar" id="iw2Grader"></div>
+          </div>
+
+          <details>
+            <summary>Show 150+ Model Sample (Part 1 &amp; Part 2)</summary>
+            <div class="model-box">
+              <p><strong>Part 1 (114 words):</strong> Universities should integrate AI tools into coursework rather than imposing blanket bans. Admittedly, unrestricted use raises legitimate concerns about plagiarism and shallow critical thinking. Nevertheless, prohibiting a technology that dominates modern workplaces fails to prepare students for professional reality. Specifically, professors can redesign assignments to evaluate source verification, original synthesis, and ethical judgment alongside final prose. For instance, business courses could require students to critique an AI-generated market analysis and justify strategic revisions in class. Consequently, learners gain practical fluency while preserving core analytical rigor. Ultimately, thoughtful integration aligns academic standards with evolving career demands.</p>
+              <p style="margin-bottom: 0;"><strong>Part 2 (71 words):</strong> If AI assistance becomes universal, employers will shift away from judging polished take-home essays toward testing spontaneous reasoning. Specifically, recruiters will prioritize live case interviews, oral defenses, and problem-solving simulations where candidates must interpret ambiguous data independently. Moreover, firms will value graduates who demonstrate strong editorial judgment and domain expertise, since spotting subtle algorithmic errors quickly becomes a decisive competitive advantage.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="footer-nav">
+          <button class="btn btn-sm" id="markWritingBtn" type="button">Mark Module 4 Complete</button>
+          <button class="btn btn-primary" data-jump="speaking" type="button">Next: Speaking & Dictation ➔</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: SPEAKING & DICTATION -->
+    <section id="tab-speaking" class="tab-panel">
+      <!-- Part A: Interactive Speaking -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Module 4A · Interactive Speaking 35s Pacer (4 min)</h2>
+          <span class="pill pill-green" id="speakingTurnsPill">0 / 4 Practiced</span>
+        </div>
+
+        <div class="callout callout-green">
+          <strong>July 2025+ Format:</strong> DET replaced single monologues with a 6-8 turn AI conversation (<strong>35 seconds per turn</strong>). Never stop after 10 seconds! Hit the <strong>25-30s green zone</strong> using the 3-Beat Formula: <strong>Direct Answer (0-5s) ➔ Explain Why (5-18s) ➔ Concrete Example (18-30s)</strong>.
+        </div>
+
+        <div class="pacer-box">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px;">
+            <strong id="speakTurnTitle">Turn 1 of 4 · Study &amp; Work Habits</strong>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+              <button class="btn btn-sm" id="speakPrevBtn" type="button">◀ Prev</button>
+              <button class="btn btn-sm" id="speakNextBtn" type="button">Next ▶</button>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+            <button class="btn btn-primary btn-sm" id="hearQuestionBtn" type="button">🔊 Hear Question</button>
+            <button class="btn btn-sm" id="toggleSpeakTextBtn" type="button">👁️ Show Question Text</button>
+            <button class="btn btn-green btn-sm" id="startSpeakTimerBtn" type="button">🎙️ Start 35s Speaking Timer</button>
+          </div>
+
+          <div id="speakQuestionText" class="model-box hidden" style="margin-bottom: 10px;"></div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 600;">
+            <span id="speakStatusLabel">Ready · Press Start 35s Timer and speak aloud</span>
+            <span id="speakTimerClock" style="font-size: 18px; font-weight: 800;">00:35</span>
+          </div>
+          <div class="timer-track" style="margin-top: 6px; margin-bottom: 10px;">
+            <div class="timer-fill" id="speakTimerBar" style="width: 0%;"></div>
+          </div>
+
+          <div class="phase-steps">
+            <div class="phase-step" id="phase0">0-5s<br />Direct Answer</div>
+            <div class="phase-step" id="phase1">5-18s<br />Why / Comparison</div>
+            <div class="phase-step" id="phase2">18-30s (TARGET)<br />Concrete Example</div>
+            <div class="phase-step" id="phase3">30-35s<br />Clean Wrap-Up</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part B: Listen and Type -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Module 4B · Listen and Type Dictation (4 min · 4 Sentences)</h2>
+          <span class="pill pill-blue" id="dictationScorePill">0 / 4 Perfect</span>
+        </div>
+
+        <p class="muted">Play 1 = type the sentence skeleton · Play 2 = fill missing middle words · Play 3 = check silent <strong>-s plurals</strong>, <strong>-ed endings</strong>, capital letter, and final period. (If your laptop is muted, use <em>Flash 3s</em>.)</p>
+
+        <div id="dictationContainer"></div>
+
+        <div class="footer-nav">
+          <button class="btn btn-sm" id="markSpeakingBtn" type="button">Mark Module 5 Complete</button>
+          <span class="pill pill-green" id="readyBanner">You are already scoring 140-150 (Target: 130) — Stay calm &amp; trust the mechanics!</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var STORAGE_KEY = "det_45min_booster_v1";
+
+      var VOCAB_CARDS = [
+        { word: "corroborate", real: true, note: "Real C1/C2 verb: to confirm or give support to a statement or finding." },
+        { word: "disrelevant", real: false, note: "Fake prefix trap! The real English word is 'irrelevant' (never disrelevant)." },
+        { word: "pragmatic", real: true, note: "Real C1 adjective: dealing with things sensibly and realistically." },
+        { word: "occurence", real: false, note: "1-letter spelling trap! Real spelling has double 'r': 'occurrence'." },
+        { word: "mitigate", real: true, note: "Real C1 verb: to make something less severe, harmful, or painful." },
+        { word: "confluctuate", real: false, note: "Fake blend trap! Blends 'conflate' and 'fluctuate' into a non-word." },
+        { word: "ubiquitous", real: true, note: "Real C1 adjective: present, appearing, or found everywhere." },
+        { word: "eloquential", real: false, note: "Fake suffix trap! Real adjective is 'eloquent' (never eloquential)." },
+        { word: "alleviate", real: true, note: "Real C1 verb: to make suffering, deficiency, or a problem less severe." },
+        { word: "perseverence", real: false, note: "1-letter spelling trap! Real spelling ends in '-ance': 'perseverance'." },
+        { word: "ambiguous", real: true, note: "Real C1 adjective: open to more than one interpretation; not clear." },
+        { word: "compulsorate", real: false, note: "Fake verb/suffix trap! Real word is 'compulsory' (not compulsorate)." },
+        { word: "scrutinize", real: true, note: "Real C1 verb (US spelling -ize): to examine or inspect closely and thoroughly." },
+        { word: "independantly", real: false, note: "1-letter spelling trap! Real spelling uses '-ent': 'independently'." },
+        { word: "proliferate", real: true, note: "Real C1/C2 verb: to increase rapidly in numbers; multiply." },
+        { word: "ubiquitate", real: false, note: "Fake verb trap! Real word is 'ubiquitous' or 'ubiquity'." },
+        { word: "meticulous", real: true, note: "Real C1 adjective: showing great attention to detail; very careful." },
+        { word: "accomodative", real: false, note: "1-letter spelling trap! Real spelling has double 'm': 'accommodative'." },
+        { word: "plausible", real: true, note: "Real C1 adjective: seeming reasonable or probable." },
+        { word: "disprudent", real: false, note: "Fake prefix trap! Real opposite of prudent is 'imprudent'." },
+        { word: "resilient", real: true, note: "Real C1 adjective: able to recover quickly from difficult conditions." },
+        { word: "plausify", real: false, note: "Fake suffix trap! There is no verb 'plausify' from plausible." },
+        { word: "substantiate", real: true, note: "Real C1/C2 verb: to provide evidence to support or prove the truth of." },
+        { word: "definitly", real: false, note: "1-letter spelling trap! Real spelling keeps the 'e': 'definitely'." },
+        { word: "bolster", real: true, note: "Real C1 verb: to support or strengthen; prop up." },
+        { word: "incoherentive", real: false, note: "Fake suffix trap! Real adjective is 'incoherent' (not incoherentive)." },
+        { word: "ephemeral", real: true, note: "Real C2 adjective: lasting for a very short time." },
+        { word: "pragmatify", real: false, note: "Fake suffix trap! Real word is 'pragmatic' or 'pragmatism'." },
+        { word: "fastidious", real: true, note: "Real C2 adjective: very attentive to and concerned about accuracy and detail." },
+        { word: "ostentify", real: false, note: "Fake suffix trap! Blends 'ostentatious' with '-ify' — not a real word." }
+      ];
+
+      var CTEST_PASSAGES = [
+        {
+          id: "p1",
+          title: "Passage 1 · Behavioral Economics (3:00 Target)",
+          tokens: [
+            { type: "text", val: "Classical economic models often assume that consumers evaluate every purchase using pure mathematical logic. Even " },
+            { type: "blank", prefix: "th", answer: "ough" },
+            { type: "text", val: " people intend to make rational " },
+            { type: "blank", prefix: "deci", answer: "sions" },
+            { type: "text", val: ", behavioral research shows that cognitive biases " },
+            { type: "blank", prefix: "consi", answer: "stently" },
+            { type: "text", val: " distort everyday choices. For example, consumers tend to weigh potential losses twice as heavily as equivalent gains, " },
+            { type: "blank", prefix: "whe", answer: "reas" },
+            { type: "text", val: " standard theory predicts symmetrical preferences. Shoppers also " },
+            { type: "blank", prefix: "expe", answer: "rience" },
+            { type: "text", val: " decision fatigue as a " },
+            { type: "blank", prefix: "re", answer: "sult" },
+            { type: "text", val: " of comparing dozens of nearly identical options, which can " },
+            { type: "blank", prefix: "signif", answer: "icantly" },
+            { type: "text", val: " lower satisfaction. To counter these tendencies, many " },
+            { type: "blank", prefix: "indi", answer: "viduals" },
+            { type: "text", val: " adopt simple savings " },
+            { type: "blank", prefix: "str", answer: "ategies" },
+            { type: "text", val: " or redesign their digital shopping " },
+            { type: "blank", prefix: "envir", answer: "onment" },
+            { type: "text", val: " to reduce impulse buying. Understanding these predictable mental shortcuts helps both policymakers and companies design clearer financial tools." }
+          ]
+        },
+        {
+          id: "p2",
+          title: "Passage 2 · Hybrid Work & Productivity (3:00 Target)",
+          tokens: [
+            { type: "text", val: "Over the past few years, remote and hybrid schedules have reshaped how modern companies organize daily work. Surveys indicate that most " },
+            { type: "blank", prefix: "emp", answer: "loyees" },
+            { type: "text", val: " value the " },
+            { type: "blank", prefix: "flex", answer: "ibility" },
+            { type: "text", val: " of working from home for tasks that demand deep concentration. Many managers, " },
+            { type: "blank", prefix: "how", answer: "ever" },
+            { type: "text", val: ", worry that long-term " },
+            { type: "blank", prefix: "colla", answer: "boration" },
+            { type: "text", val: " suffers when teams miss out on " },
+            { type: "blank", prefix: "spont", answer: "aneous" },
+            { type: "text", val: " hallway conversations. In addition, " },
+            { type: "blank", prefix: "main", answer: "taining" },
+            { type: "text", val: " clear " },
+            { type: "blank", prefix: "commu", answer: "nication" },
+            { type: "text", val: " across distributed offices becomes " },
+            { type: "blank", prefix: "part", answer: "icularly" },
+            { type: "text", val: " challenging when onboarding recent graduates. Consequently, forward-thinking " },
+            { type: "blank", prefix: "org", answer: "anizations" },
+            { type: "text", val: " now schedule dedicated anchor days to strike a sustainable " },
+            { type: "blank", prefix: "bal", answer: "ance" },
+            { type: "text", val: " between autonomy and teamwork. Ultimately, the most successful workplaces measure output quality rather than simply counting hours spent at a desk." }
+          ]
+        },
+        {
+          id: "p3",
+          title: "Passage 3 · Urban Ecology (3:00 Target)",
+          tokens: [
+            { type: "text", val: "As global cities expand, urban planners increasingly turn to vegetation to combat extreme summer heat. Dense concrete surfaces trap solar energy and push evening " },
+            { type: "blank", prefix: "temp", answer: "eratures" },
+            { type: "text", val: " noticeably higher than in nearby rural areas. Planting street trees cools sidewalks through shade and evaporation while " },
+            { type: "blank", prefix: "abs", answer: "orbing" },
+            { type: "text", val: " storm runoff during heavy rainfall. In " },
+            { type: "blank", prefix: "add", answer: "ition" },
+            { type: "text", val: ", shaded " },
+            { type: "blank", prefix: "neig", answer: "hborhoods" },
+            { type: "text", val: " encourage local " },
+            { type: "blank", prefix: "res", answer: "idents" },
+            { type: "text", val: " to walk more often, creating measurable public health " },
+            { type: "blank", prefix: "ben", answer: "efits" },
+            { type: "text", val: ". Parks and green roofs can be " },
+            { type: "blank", prefix: "esp", answer: "ecially" },
+            { type: "text", val: " effective, though initial " },
+            { type: "blank", prefix: "inv", answer: "estment" },
+            { type: "text", val: " costs remain a hurdle unless municipal leaders " },
+            { type: "blank", prefix: "rec", answer: "ognize" },
+            { type: "text", val: " their long-term " },
+            { type: "blank", prefix: "sust", answer: "ainable" },
+            { type: "text", val: " value. Cities that integrate green infrastructure early often build cleaner and more resilient communities for future generations." }
+          ]
+        }
+      ];
+
+      var SPEAKING_PROMPTS = [
+        {
+          title: "Turn 1 of 4 · Study & Work Habits",
+          question: "Do you prefer preparing for major deadlines in short daily sessions or in longer uninterrupted blocks of time, and why?"
+        },
+        {
+          title: "Turn 2 of 4 · Follow-up: Adapting Under Pressure",
+          question: "That makes sense. Can you describe a recent time when unexpected obstacles forced you to adjust your schedule?"
+        },
+        {
+          title: "Turn 3 of 4 · International Business & Studies",
+          question: "When studying or working in an international city, what is the biggest advantage for a recent graduate?"
+        },
+        {
+          title: "Turn 4 of 4 · Follow-up: Communication Across Cultures",
+          question: "How can teams avoid misunderstandings when colleagues come from different academic or cultural backgrounds?"
+        }
+      ];
+
+      var DICTATION_ITEMS = [
+        {
+          id: "d1",
+          sentence: "Researchers have emphasized that preliminary findings rarely guarantee long-term success.",
+          focus: "Watch '-ed' on 'emphasized', '-s' on 'findings', and hyphen/spelling on 'preliminary' & 'guarantee'."
+        },
+        {
+          id: "d2",
+          sentence: "Although the committee postponed its decision, several proposals remained under consideration.",
+          focus: "Watch double letters in 'committee', '-ed' on 'postponed'/'remained', and 'its' (no apostrophe)."
+        },
+        {
+          id: "d3",
+          sentence: "Technological innovation often transforms industries faster than regulations can adapt.",
+          focus: "Watch '-s' on 'transforms', 'industries', and 'regulations'."
+        },
+        {
+          id: "d4",
+          sentence: "Students who actively participate in seminars generally retain complex concepts more effectively.",
+          focus: "Watch plural '-s' on 'Students', 'seminars', 'concepts' and double 'l' in 'generally'."
+        }
+      ];
+
+      var C1_CONNECTORS = [
+        "at first glance",
+        "closer inspection",
+        "admittedly",
+        "nevertheless",
+        "specifically",
+        "for instance",
+        "consequently",
+        "ultimately",
+        "moreover",
+        "furthermore",
+        "however",
+        "therefore"
+      ];
+
+      var COMPLEX_MARKERS = ["although", "whereas", "while", "because", "which", "despite", "since", "unless", "though"];
+      var SPECULATION_MARKERS = ["appears", "seems", "likely", "presumably", "suggests", "might", "could", "probably", "indicates"];
+      var UK_TO_US = {
+        "colour": "color",
+        "colours": "colors",
+        "behaviour": "behavior",
+        "behaviours": "behaviors",
+        "behavioural": "behavioral",
+        "centre": "center",
+        "centres": "centers",
+        "organise": "organize",
+        "organises": "organizes",
+        "organised": "organized",
+        "organising": "organizing",
+        "organisations": "organizations",
+        "organisation": "organization",
+        "analyse": "analyze",
+        "analyses": "analyzes",
+        "analysed": "analyzed",
+        "analysing": "analyzing",
+        "programme": "program",
+        "programmes": "programs",
+        "neighbour": "neighbor",
+        "neighbourhood": "neighborhood",
+        "neighbourhoods": "neighborhoods",
+        "recognise": "recognize",
+        "recognises": "recognizes",
+        "recognised": "recognized",
+        "recognising": "recognizing",
+        "emphasise": "emphasize",
+        "emphasised": "emphasized",
+        "emphasising": "emphasizing",
+        "prioritise": "prioritize",
+        "prioritised": "prioritized",
+        "prioritising": "prioritizing",
+        "favour": "favor",
+        "labour": "labor"
+      };
+
+      var defaultState = function () {
+        return {
+          activeTab: "overview",
+          completedModules: {
+            overview: false,
+            vocab: false,
+            ctest: false,
+            writing: false,
+            speaking: false
+          },
+          checklist: [false, false, false, false, false, false, false, false],
+          vocabOrder: seededShuffleIndices(VOCAB_CARDS.length, 42),
+          vocabIndex: 0,
+          vocabAnswers: {},
+          ctestInputs: {},
+          ctestChecked: {},
+          writingPhoto: "",
+          writingPart1: "",
+          writingPart2: "",
+          writingPart2Unlocked: false,
+          speakTurnIndex: 0,
+          speakPracticed: {},
+          dictationInputs: {},
+          dictationPlays: { d1: 3, d2: 3, d3: 3, d4: 3 },
+          dictationChecked: {}
+        };
+      };
+
+      function seededShuffleIndices(n, seed) {
+        var arr = [];
+        for (var i = 0; i < n; i++) arr.push(i);
+        var s = seed;
+        for (var j = n - 1; j > 0; j--) {
+          s = (s * 1664525 + 1013904223) % 4294967296;
+          var k = s % (j + 1);
+          var tmp = arr[j];
+          arr[j] = arr[k];
+          arr[k] = tmp;
+        }
+        return arr;
+      }
+
+      var state = loadState();
+
+      function loadState() {
+        try {
+          var raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return defaultState();
+          var parsed = JSON.parse(raw);
+          var base = defaultState();
+          for (var key in base) {
+            if (Object.prototype.hasOwnProperty.call(parsed, key)) {
+              base[key] = parsed[key];
+            }
+          }
+          if (!Array.isArray(base.vocabOrder) || base.vocabOrder.length !== VOCAB_CARDS.length) {
+            base.vocabOrder = seededShuffleIndices(VOCAB_CARDS.length, 42);
+          }
+          return base;
+        } catch (e) {
+          return defaultState();
+        }
+      }
+
+      function saveState() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        } catch (e) {
+          // Ignore storage quota issues cleanly
+        }
+      }
+
+      // Navigation & Module Progress
+      var tabButtons = document.querySelectorAll(".nav-tab");
+      var tabPanels = document.querySelectorAll(".tab-panel");
+
+      function switchTab(tabId, updateHash) {
+        if (!document.getElementById("tab-" + tabId)) tabId = "overview";
+        state.activeTab = tabId;
+        saveState();
+
+        tabButtons.forEach(function (btn) {
+          btn.classList.toggle("active", btn.getAttribute("data-tab") === tabId);
+        });
+        tabPanels.forEach(function (panel) {
+          panel.classList.toggle("active", panel.id === "tab-" + tabId);
+        });
+
+        if (updateHash !== false) {
+          try {
+            history.replaceState(null, "", "#" + tabId);
+          } catch (e) {}
+        }
+
+        if (tabId === "vocab") {
+          startVocabCardTimer();
+        } else {
+          stopVocabCardTimer();
+        }
+      }
+
+      function updateModuleHeader() {
+        var count = 0;
+        tabButtons.forEach(function (btn) {
+          var t = btn.getAttribute("data-tab");
+          var done = Boolean(state.completedModules[t]);
+          btn.classList.toggle("completed", done);
+          if (done) count++;
+        });
+        document.getElementById("modulesPill").textContent = "Modules Completed: " + count + " / 5";
+      }
+
+      function markModuleDone(tabId, value) {
+        state.completedModules[tabId] = value !== false;
+        saveState();
+        updateModuleHeader();
+      }
+
+      tabButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          switchTab(btn.getAttribute("data-tab"));
+        });
+      });
+
+      document.querySelectorAll("[data-jump]").forEach(function (el) {
+        el.addEventListener("click", function () {
+          switchTab(el.getAttribute("data-jump"));
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+
+      // Reset All
+      document.getElementById("resetAllBtn").addEventListener("click", function () {
+        if (window.confirm("Reset all drill scores, answers, and checkboxes?")) {
+          stopVocabCardTimer();
+          stopCountdown("photo");
+          stopCountdown("iw1");
+          stopCountdown("iw2");
+          stopSpeakingTimer();
+          state = defaultState();
+          saveState();
+          renderAll();
+          switchTab("overview");
+        }
+      });
+
+      // TAB 1: Checklist
+      function renderChecklist() {
+        var boxes = document.querySelectorAll("#securityChecklist input[type='checkbox']");
+        var checkedCount = 0;
+        boxes.forEach(function (box, idx) {
+          var val = Boolean(state.checklist[idx]);
+          box.checked = val;
+          box.closest(".check-item").classList.toggle("checked", val);
+          if (val) checkedCount++;
+        });
+        document.getElementById("checklistStatusPill").textContent = checkedCount + " / 8 Checked";
+        if (checkedCount === 8 && !state.completedModules.overview) {
+          markModuleDone("overview", true);
+        }
+      }
+
+      document.querySelectorAll("#securityChecklist input[type='checkbox']").forEach(function (box) {
+        box.addEventListener("change", function () {
+          var idx = Number(box.getAttribute("data-check"));
+          state.checklist[idx] = box.checked;
+          saveState();
+          renderChecklist();
+        });
+      });
+
+      document.getElementById("markOverviewBtn").addEventListener("click", function () {
+        markModuleDone("overview", !state.completedModules.overview);
+      });
+
+      // TAB 2: Read & Select Drill
+      var vocabTimerHandle = null;
+      var vocabTimeLeftMs = 5000;
+      var vocabLocked = false;
+
+      function stopVocabCardTimer() {
+        if (vocabTimerHandle) {
+          clearInterval(vocabTimerHandle);
+          vocabTimerHandle = null;
+        }
+      }
+
+      function startVocabCardTimer() {
+        stopVocabCardTimer();
+        if (state.vocabIndex >= VOCAB_CARDS.length || vocabLocked) return;
+        vocabTimeLeftMs = 5000;
+        updateVocabTimerUI();
+        vocabTimerHandle = setInterval(function () {
+          vocabTimeLeftMs = Math.max(0, vocabTimeLeftMs - 100);
+          updateVocabTimerUI();
+          if (vocabTimeLeftMs === 0) {
+            stopVocabCardTimer();
+          }
+        }, 100);
+      }
+
+      function updateVocabTimerUI() {
+        var bar = document.getElementById("vocabTimerBar");
+        var txt = document.getElementById("vocabTimerText");
+        var pct = Math.max(0, (vocabTimeLeftMs / 5000) * 100);
+        bar.style.width = pct + "%";
+        if (vocabTimeLeftMs <= 1500) {
+          bar.style.backgroundColor = "var(--amber)";
+        } else {
+          bar.style.backgroundColor = "var(--green)";
+        }
+        txt.textContent = vocabTimeLeftMs > 0 ? (vocabTimeLeftMs / 1000).toFixed(1) + "s pace" : "⏱️ Pace check: doubt = NO!";
+      }
+
+      function renderVocab() {
+        var stage = document.getElementById("vocabStage");
+        var summary = document.getElementById("vocabSummary");
+        var footer = document.getElementById("vocabFooterNav");
+        var pill = document.getElementById("vocabDonePill");
+
+        if (state.vocabIndex >= VOCAB_CARDS.length) {
+          stage.classList.add("hidden");
+          footer.classList.add("hidden");
+          summary.classList.remove("hidden");
+          renderVocabSummary();
+          pill.textContent = "30 / 30 Done";
+          markModuleDone("vocab", true);
+          stopVocabCardTimer();
+          return;
+        }
+
+        stage.classList.remove("hidden");
+        footer.classList.remove("hidden");
+        summary.classList.add("hidden");
+
+        var cardIdx = state.vocabOrder[state.vocabIndex];
+        var card = VOCAB_CARDS[cardIdx];
+        var answered = Object.prototype.hasOwnProperty.call(state.vocabAnswers, String(cardIdx));
+
+        document.getElementById("vocabProgressText").textContent = "Card " + (state.vocabIndex + 1) + " / " + VOCAB_CARDS.length;
+        document.getElementById("vocabWord").textContent = card.word;
+        pill.textContent = Object.keys(state.vocabAnswers).length + " / 30 Answered";
+
+        var fb = document.getElementById("vocabFeedback");
+        var nextBtn = document.getElementById("btnVocabNext");
+        var yesBtn = document.getElementById("btnVocabYes");
+        var noBtn = document.getElementById("btnVocabNo");
+
+        if (answered) {
+          vocabLocked = true;
+          stopVocabCardTimer();
+          var userSaidYes = state.vocabAnswers[String(cardIdx)];
+          var isRight = userSaidYes === card.real;
+          fb.classList.remove("hidden");
+          yesBtn.disabled = true;
+          noBtn.disabled = true;
+          nextBtn.classList.remove("hidden");
+
+          if (card.real && userSaidYes) {
+            fb.className = "feedback-banner callout-green";
+            fb.innerHTML = "<strong>✅ Correct!</strong> " + escapeHtml(card.note);
+          } else if (!card.real && !userSaidYes) {
+            fb.className = "feedback-banner callout-green";
+            fb.innerHTML = "<strong>✅ Trap avoided!</strong> " + escapeHtml(card.note);
+          } else if (!card.real && userSaidYes) {
+            fb.className = "feedback-banner";
+            fb.style.background = "var(--red-bg)";
+            fb.style.borderColor = "var(--red-border)";
+            fb.style.color = "#991b1b";
+            fb.innerHTML = "<strong>⚠️ Heavy Penalty (-1.5 pts)!</strong> You clicked YES on a fake word. " + escapeHtml(card.note);
+          } else {
+            fb.className = "feedback-banner callout-amber";
+            fb.innerHTML = "<strong>ℹ️ Safe miss:</strong> " + escapeHtml(card.note) + " (Clicking NO on an unfamiliar word barely hurts on DET.)";
+          }
+        } else {
+          vocabLocked = false;
+          fb.classList.add("hidden");
+          nextBtn.classList.add("hidden");
+          yesBtn.disabled = false;
+          noBtn.disabled = false;
+          if (state.activeTab === "vocab") {
+            startVocabCardTimer();
+          }
+        }
+      }
+
+      function answerVocab(userSaidYes) {
+        if (state.vocabIndex >= VOCAB_CARDS.length || vocabLocked) return;
+        var cardIdx = state.vocabOrder[state.vocabIndex];
+        state.vocabAnswers[String(cardIdx)] = userSaidYes;
+        saveState();
+        renderVocab();
+      }
+
+      function advanceVocab() {
+        if (state.vocabIndex < VOCAB_CARDS.length) {
+          state.vocabIndex++;
+          vocabLocked = false;
+          saveState();
+          renderVocab();
+        }
+      }
+
+      function renderVocabSummary() {
+        var realCaught = 0;
+        var fakeAvoided = 0;
+        var fakeClicked = 0;
+        var misses = [];
+
+        VOCAB_CARDS.forEach(function (card, idx) {
+          var ans = Boolean(state.vocabAnswers[String(idx)]);
+          if (card.real) {
+            if (ans) {
+              realCaught++;
+            } else {
+              misses.push({ word: card.word, kind: "Skipped Real Word (tiny miss)", note: card.note, severe: false });
+            }
+          } else {
+            if (!ans) {
+              fakeAvoided++;
+            } else {
+              fakeClicked++;
+              misses.push({ word: card.word, kind: "Clicked YES on Fake Trap (-1.5)", note: card.note, severe: true });
+            }
+          }
+        });
+
+        var netScore = realCaught + fakeAvoided - fakeClicked * 1.5;
+        var band = "135";
+        if (netScore >= 26) band = "155+";
+        else if (netScore >= 22) band = "145-150";
+        else if (netScore >= 17) band = "135-145";
+        else band = "125-135";
+
+        document.getElementById("statRealCaught").textContent = realCaught + " / 15";
+        document.getElementById("statFakeAvoided").textContent = fakeAvoided + " / 15";
+        document.getElementById("statFakeClicked").textContent = String(fakeClicked);
+        document.getElementById("statVocabBand").textContent = band;
+
+        var listEl = document.getElementById("vocabMissList");
+        if (misses.length === 0) {
+          listEl.innerHTML = '<div class="callout callout-green"><strong>Perfect 30 / 30!</strong> Zero fake traps clicked and every real word caught.</div>';
+        } else {
+          var html = '<div class="callout callout-amber"><strong>Review Your Misses (' + misses.length + '):</strong><ul style="margin:6px 0 0; padding-left:18px;">';
+          misses.forEach(function (m) {
+            html += '<li><strong>' + escapeHtml(m.word) + '</strong> — <em>' + escapeHtml(m.kind) + '</em>: ' + escapeHtml(m.note) + '</li>';
+          });
+          html += "</ul></div>";
+          listEl.innerHTML = html;
+        }
+      }
+
+      function restartVocab() {
+        stopVocabCardTimer();
+        state.vocabOrder = seededShuffleIndices(VOCAB_CARDS.length, Date.now() % 100000);
+        state.vocabIndex = 0;
+        state.vocabAnswers = {};
+        vocabLocked = false;
+        saveState();
+        renderVocab();
+      }
+
+      document.getElementById("btnVocabYes").addEventListener("click", function () { answerVocab(true); });
+      document.getElementById("btnVocabNo").addEventListener("click", function () { answerVocab(false); });
+      document.getElementById("btnVocabNext").addEventListener("click", advanceVocab);
+      document.getElementById("btnVocabRestart").addEventListener("click", restartVocab);
+      document.getElementById("btnVocabRestartInline").addEventListener("click", restartVocab);
+      document.getElementById("markVocabBtn").addEventListener("click", function () {
+        markModuleDone("vocab", !state.completedModules.vocab);
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (state.activeTab !== "vocab") return;
+        var tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
+        if (tag === "input" || tag === "textarea") return;
+        var k = e.key.toLowerCase();
+        if (!vocabLocked) {
+          if (k === "y") {
+            e.preventDefault();
+            answerVocab(true);
+          } else if (k === "n") {
+            e.preventDefault();
+            answerVocab(false);
+          }
+        } else if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          advanceVocab();
+        }
+      });
+
+      // TAB 3: C-Test
+      var ctestTimers = {};
+
+      function renderCTest() {
+        var container = document.getElementById("ctestContainer");
+        container.innerHTML = "";
+        var totalCorrect = 0;
+        var totalBlanks = 0;
+        var checkedPassages = 0;
+
+        CTEST_PASSAGES.forEach(function (passage, pIdx) {
+          var card = document.createElement("div");
+          card.className = "card";
+          card.style.boxShadow = "none";
+          card.style.background = "#fbfdff";
+
+          var header = document.createElement("div");
+          header.className = "card-header";
+          var h3 = document.createElement("h3");
+          h3.textContent = passage.title;
+          header.appendChild(h3);
+
+          var timerWrap = document.createElement("div");
+          timerWrap.style.display = "flex";
+          timerWrap.style.gap = "8px";
+          timerWrap.style.alignItems = "center";
+
+          var timerPill = document.createElement("span");
+          timerPill.className = "pill";
+          timerPill.id = "ctestTimer_" + passage.id;
+          timerPill.textContent = "03:00";
+
+          var timerBtn = document.createElement("button");
+          timerBtn.className = "btn btn-sm btn-primary";
+          timerBtn.type = "button";
+          timerBtn.textContent = "▶ Start 3:00";
+          timerBtn.addEventListener("click", function () {
+            togglePassageTimer(passage.id, 180, timerPill, timerBtn);
+          });
+
+          timerWrap.appendChild(timerPill);
+          timerWrap.appendChild(timerBtn);
+          header.appendChild(timerWrap);
+          card.appendChild(header);
+
+          var textDiv = document.createElement("div");
+          textDiv.className = "ctest-text";
+
+          var blankIdx = 0;
+          var passageCorrect = 0;
+          var passageBlanks = 0;
+          var isChecked = Boolean(state.ctestChecked[passage.id]);
+          if (isChecked) checkedPassages++;
+
+          passage.tokens.forEach(function (tok) {
+            if (tok.type === "text") {
+              textDiv.appendChild(document.createTextNode(tok.val));
+            } else {
+              var bKey = passage.id + "_" + blankIdx;
+              var userVal = state.ctestInputs[bKey] || "";
+              var fullWord = (tok.prefix + tok.answer).toLowerCase();
+              var suf = tok.answer.toLowerCase();
+              var cleanUser = userVal.trim().toLowerCase();
+              var ok = cleanUser === suf || cleanUser === fullWord;
+
+              passageBlanks++;
+              totalBlanks++;
+              if (isChecked && ok) {
+                passageCorrect++;
+                totalCorrect++;
+              }
+
+              var wrap = document.createElement("span");
+              wrap.className = "blank-wrap";
+              wrap.appendChild(document.createTextNode(tok.prefix));
+
+              var inp = document.createElement("input");
+              inp.type = "text";
+              inp.className = "blank-input";
+              inp.style.width = Math.max(66, tok.answer.length * 10 + 18) + "px";
+              inp.value = userVal;
+              inp.setAttribute("aria-label", "Complete word starting with " + tok.prefix);
+              inp.setAttribute("autocomplete", "off");
+              inp.setAttribute("spellcheck", "false");
+
+              if (isChecked) {
+                inp.classList.add(ok ? "correct" : "wrong");
+              }
+
+              (function (keyCopy) {
+                inp.addEventListener("input", function (ev) {
+                  state.ctestInputs[keyCopy] = ev.target.value;
+                  saveState();
+                });
+              })(bKey);
+
+              wrap.appendChild(inp);
+
+              var hintSpan = document.createElement("span");
+              hintSpan.className = "hint-tag hidden";
+              hintSpan.setAttribute("data-hint-for", passage.id);
+              hintSpan.textContent = "(" + tok.answer.length + ")";
+              wrap.appendChild(hintSpan);
+
+              textDiv.appendChild(wrap);
+              blankIdx++;
+            }
+          });
+
+          card.appendChild(textDiv);
+
+          var btnRow = document.createElement("div");
+          btnRow.style.display = "flex";
+          btnRow.style.flexWrap = "wrap";
+          btnRow.style.gap = "8px";
+          btnRow.style.alignItems = "center";
+
+          var checkBtn = document.createElement("button");
+          checkBtn.className = "btn btn-green btn-sm";
+          checkBtn.type = "button";
+          checkBtn.textContent = "✓ Check Passage";
+          checkBtn.addEventListener("click", function () {
+            state.ctestChecked[passage.id] = true;
+            saveState();
+            renderCTest();
+          });
+
+          var hintBtn = document.createElement("button");
+          hintBtn.className = "btn btn-sm";
+          hintBtn.type = "button";
+          hintBtn.textContent = "💡 Show Missing Letter Counts";
+          hintBtn.addEventListener("click", function () {
+            card.querySelectorAll('[data-hint-for="' + passage.id + '"]').forEach(function (el) {
+              el.classList.toggle("hidden");
+            });
+          });
+
+          var revealBtn = document.createElement("button");
+          revealBtn.className = "btn btn-sm";
+          revealBtn.type = "button";
+          revealBtn.textContent = "👁️ Reveal Answers";
+          revealBtn.addEventListener("click", function () {
+            var b = 0;
+            passage.tokens.forEach(function (t) {
+              if (t.type === "blank") {
+                state.ctestInputs[passage.id + "_" + b] = t.answer;
+                b++;
+              }
+            });
+            state.ctestChecked[passage.id] = true;
+            saveState();
+            renderCTest();
+          });
+
+          btnRow.appendChild(checkBtn);
+          btnRow.appendChild(hintBtn);
+          btnRow.appendChild(revealBtn);
+
+          if (isChecked) {
+            var scoreBadge = document.createElement("span");
+            scoreBadge.className = passageCorrect >= 8 ? "pill pill-green" : "pill pill-amber";
+            scoreBadge.textContent = passageCorrect + " / " + passageBlanks + " correct";
+            btnRow.appendChild(scoreBadge);
+          }
+
+          card.appendChild(btnRow);
+          container.appendChild(card);
+        });
+
+        document.getElementById("ctestScorePill").textContent = totalCorrect + " / " + totalBlanks + " Correct";
+        if (checkedPassages === CTEST_PASSAGES.length && !state.completedModules.ctest) {
+          markModuleDone("ctest", true);
+        }
+      }
+
+      function togglePassageTimer(id, seconds, pillEl, btnEl) {
+        if (ctestTimers[id]) {
+          clearInterval(ctestTimers[id].handle);
+          delete ctestTimers[id];
+          btnEl.textContent = "▶ Start 3:00";
+          return;
+        }
+        var remaining = seconds;
+        pillEl.textContent = formatClock(remaining);
+        btnEl.textContent = "⏹ Stop";
+        ctestTimers[id] = {
+          handle: setInterval(function () {
+            remaining--;
+            pillEl.textContent = formatClock(Math.max(0, remaining));
+            if (remaining <= 0) {
+              clearInterval(ctestTimers[id].handle);
+              delete ctestTimers[id];
+              pillEl.className = "pill pill-amber";
+              pillEl.textContent = "00:00 (Time!)";
+              btnEl.textContent = "▶ Restart 3:00";
+            }
+          }, 1000)
+        };
+      }
+
+      document.getElementById("markCtestBtn").addEventListener("click", function () {
+        markModuleDone("ctest", !state.completedModules.ctest);
+      });
+
+      // TAB 4: Writing Booster
+      var activeTextareaId = "photoInput";
+      var countdownHandles = {};
+
+      ["photoInput", "iw1Input", "iw2Input"].forEach(function (id) {
+        var el = document.getElementById(id);
+        el.addEventListener("focus", function () {
+          activeTextareaId = id;
+        });
+      });
+
+      document.querySelectorAll("#connectorBank .chip-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var target = document.getElementById(activeTextareaId) || document.getElementById("iw1Input");
+          var phrase = btn.getAttribute("data-phrase");
+          var start = target.selectionStart || target.value.length;
+          var end = target.selectionEnd || target.value.length;
+          var before = target.value.slice(0, start);
+          var after = target.value.slice(end);
+          var sep = before.length > 0 && !/\s$/.test(before) ? " " : "";
+          target.value = before + sep + phrase + after;
+          target.focus();
+          var pos = (before + sep + phrase).length;
+          target.setSelectionRange(pos, pos);
+          target.dispatchEvent(new Event("input"));
+        });
+      });
+
+      function stopCountdown(key) {
+        if (countdownHandles[key]) {
+          clearInterval(countdownHandles[key]);
+          delete countdownHandles[key];
+        }
+      }
+
+      function setupTimerButton(key, seconds, displayId, btnId, label) {
+        var display = document.getElementById(displayId);
+        var btn = document.getElementById(btnId);
+        btn.addEventListener("click", function () {
+          if (countdownHandles[key]) {
+            stopCountdown(key);
+            btn.textContent = "▶ Start " + label + " Timer";
+            display.textContent = formatClock(seconds);
+            display.className = "pill";
+            return;
+          }
+          var left = seconds;
+          display.textContent = formatClock(left);
+          display.className = "pill pill-blue";
+          btn.textContent = "⏹ Stop Timer";
+          countdownHandles[key] = setInterval(function () {
+            left--;
+            display.textContent = formatClock(Math.max(0, left));
+            if (left <= 25 && left > 0) {
+              display.className = "pill pill-amber";
+            }
+            if (left <= 0) {
+              stopCountdown(key);
+              display.className = "pill pill-red";
+              display.textContent = "00:00 Time!";
+              btn.textContent = "▶ Restart " + label;
+              if (key === "iw1" && !state.writingPart2Unlocked) {
+                unlockWritingPart2();
+              }
+            }
+          }, 1000);
+        });
+      }
+
+      setupTimerButton("photo", 60, "photoTimerDisplay", "photoTimerBtn", "1:00");
+      setupTimerButton("iw1", 300, "iw1TimerDisplay", "iw1TimerBtn", "5:00");
+      setupTimerButton("iw2", 180, "iw2TimerDisplay", "iw2TimerBtn", "3:00");
+
+      function unlockWritingPart2() {
+        state.writingPart2Unlocked = true;
+        saveState();
+        document.getElementById("iw2Section").classList.remove("hidden");
+        document.getElementById("unlockPart2Btn").classList.add("hidden");
+      }
+
+      document.getElementById("unlockPart2Btn").addEventListener("click", unlockWritingPart2);
+
+      function analyzeWriting(text, minW, maxW, mode) {
+        var trimmed = text.trim();
+        var words = trimmed ? trimmed.split(/\s+/).filter(Boolean) : [];
+        var wordCount = words.length;
+        var sentences = trimmed ? trimmed.split(/[.!?]+/).filter(function (s) { return s.trim().length > 2; }).length : 0;
+        var lower = trimmed.toLowerCase();
+
+        var connectorsFound = C1_CONNECTORS.filter(function (c) {
+          return lower.indexOf(c) !== -1;
+        });
+
+        var complexFound = COMPLEX_MARKERS.filter(function (m) {
+          return new RegExp("\\b" + m + "\\b").test(lower);
+        });
+
+        var specFound = SPECULATION_MARKERS.some(function (m) {
+          return new RegExp("\\b" + m + "\\b").test(lower);
+        });
+
+        var ukHits = [];
+        words.forEach(function (w) {
+          var clean = w.toLowerCase().replace(/[^a-z]/g, "");
+          if (UK_TO_US[clean]) {
+            ukHits.push(clean + " ➔ " + UK_TO_US[clean]);
+          }
+        });
+
+        var pills = [];
+        var wClass = wordCount >= minW && wordCount <= maxW ? "pill-green" : (wordCount > 0 ? "pill-amber" : "");
+        pills.push('<span class="pill ' + wClass + '">Words: ' + wordCount + " / target " + minW + "-" + maxW + "</span>");
+
+        if (mode === "photo") {
+          pills.push('<span class="pill ' + (sentences >= 3 ? "pill-green" : "") + '">Sentences: ' + sentences + " / 3+</span>");
+          pills.push('<span class="pill ' + (specFound ? "pill-green" : "") + '">' + (specFound ? "✓ Inference phrase used" : "Add inference (appears / presumably)") + "</span>");
+        } else {
+          var targetConn = mode === "iw1" ? 3 : 2;
+          pills.push('<span class="pill ' + (connectorsFound.length >= targetConn ? "pill-green" : "") + '">C1 Connectors: ' + connectorsFound.length + " / " + targetConn + "+</span>");
+          pills.push('<span class="pill ' + (complexFound.length >= 1 ? "pill-green" : "") + '">' + (complexFound.length >= 1 ? "✓ Complex clause (" + complexFound[0] + ")" : "Add 1 complex clause (although/whereas)") + "</span>");
+        }
+
+        if (ukHits.length > 0) {
+          pills.push('<span class="pill pill-red">US Spelling Lock: switch ' + escapeHtml(ukHits.slice(0, 2).join(", ")) + "</span>");
+        } else if (wordCount > 5) {
+          pills.push('<span class="pill pill-green">✓ Clean US Spelling</span>');
+        }
+
+        return { html: pills.join(""), wordCount: wordCount };
+      }
+
+      function renderWriting() {
+        var photoEl = document.getElementById("photoInput");
+        var iw1El = document.getElementById("iw1Input");
+        var iw2El = document.getElementById("iw2Input");
+
+        photoEl.value = state.writingPhoto;
+        iw1El.value = state.writingPart1;
+        iw2El.value = state.writingPart2;
+
+        if (state.writingPart2Unlocked) {
+          document.getElementById("iw2Section").classList.remove("hidden");
+          document.getElementById("unlockPart2Btn").classList.add("hidden");
+        } else {
+          document.getElementById("iw2Section").classList.add("hidden");
+          document.getElementById("unlockPart2Btn").classList.remove("hidden");
+        }
+
+        var rPhoto = analyzeWriting(state.writingPhoto, 35, 50, "photo");
+        var rIw1 = analyzeWriting(state.writingPart1, 100, 130, "iw1");
+        var rIw2 = analyzeWriting(state.writingPart2, 65, 85, "iw2");
+
+        document.getElementById("photoGrader").innerHTML = rPhoto.html;
+        document.getElementById("iw1Grader").innerHTML = rIw1.html;
+        document.getElementById("iw2Grader").innerHTML = rIw2.html;
+
+        if (rPhoto.wordCount >= 30 && rIw1.wordCount >= 70 && rIw2.wordCount >= 40 && !state.completedModules.writing) {
+          markModuleDone("writing", true);
+        }
+      }
+
+      document.getElementById("photoInput").addEventListener("input", function (e) {
+        state.writingPhoto = e.target.value;
+        saveState();
+        renderWriting();
+      });
+
+      document.getElementById("iw1Input").addEventListener("input", function (e) {
+        state.writingPart1 = e.target.value;
+        saveState();
+        renderWriting();
+      });
+
+      document.getElementById("iw2Input").addEventListener("input", function (e) {
+        state.writingPart2 = e.target.value;
+        saveState();
+        renderWriting();
+      });
+
+      document.getElementById("markWritingBtn").addEventListener("click", function () {
+        markModuleDone("writing", !state.completedModules.writing);
+      });
+
+      // TAB 5A: Speaking Pacer
+      var speakTimerHandle = null;
+      var speakElapsed = 0;
+
+      function stopSpeakingTimer() {
+        if (speakTimerHandle) {
+          clearInterval(speakTimerHandle);
+          speakTimerHandle = null;
+        }
+      }
+
+      function speakText(txt, rate) {
+        if (!("speechSynthesis" in window)) {
+          window.alert("Speech synthesis is not available in this browser view. Use 'Show Question Text' or 'Flash 3s'.");
+          return false;
+        }
+        window.speechSynthesis.cancel();
+        var utter = new SpeechSynthesisUtterance(txt);
+        utter.lang = "en-US";
+        utter.rate = rate || 0.96;
+        window.speechSynthesis.speak(utter);
+        return true;
+      }
+
+      function updateSpeakPhaseUI(sec) {
+        var remaining = Math.max(0, 35 - sec);
+        document.getElementById("speakTimerClock").textContent = formatClock(remaining);
+        document.getElementById("speakTimerBar").style.width = Math.min(100, (sec / 35) * 100) + "%";
+
+        var phases = [0, 1, 2, 3].map(function (i) {
+          return document.getElementById("phase" + i);
+        });
+        phases.forEach(function (el) {
+          el.className = "phase-step";
+        });
+
+        var statusLabel = document.getElementById("speakStatusLabel");
+        if (sec === 0) {
+          statusLabel.textContent = "Ready · Press Start 35s Timer and speak aloud";
+        } else if (sec <= 5) {
+          phases[0].classList.add("active-phase");
+          statusLabel.textContent = "Beat 1 (0-5s): Give your direct answer!";
+        } else if (sec <= 18) {
+          phases[1].classList.add("active-phase");
+          statusLabel.textContent = "Beat 2 (5-18s): Explain why / give a comparison";
+        } else if (sec <= 30) {
+          phases[2].classList.add("target-phase");
+          statusLabel.textContent = "Beat 3 (18-30s): Concrete example — GREEN TARGET ZONE!";
+        } else {
+          phases[3].classList.add("target-phase");
+          statusLabel.textContent = "Wrap up cleanly (30-35s) — great length!";
+        }
+      }
+
+      function renderSpeaking() {
+        var p = SPEAKING_PROMPTS[state.speakTurnIndex] || SPEAKING_PROMPTS[0];
+        document.getElementById("speakTurnTitle").textContent = p.title;
+        document.getElementById("speakQuestionText").textContent = p.question;
+
+        var practicedCount = Object.keys(state.speakPracticed).filter(function (k) {
+          return state.speakPracticed[k];
+        }).length;
+        document.getElementById("speakingTurnsPill").textContent = practicedCount + " / 4 Practiced";
+        checkSpeakingModuleComplete();
+      }
+
+      document.getElementById("speakPrevBtn").addEventListener("click", function () {
+        stopSpeakingTimer();
+        speakElapsed = 0;
+        updateSpeakPhaseUI(0);
+        state.speakTurnIndex = (state.speakTurnIndex + SPEAKING_PROMPTS.length - 1) % SPEAKING_PROMPTS.length;
+        saveState();
+        renderSpeaking();
+      });
+
+      document.getElementById("speakNextBtn").addEventListener("click", function () {
+        stopSpeakingTimer();
+        speakElapsed = 0;
+        updateSpeakPhaseUI(0);
+        state.speakTurnIndex = (state.speakTurnIndex + 1) % SPEAKING_PROMPTS.length;
+        saveState();
+        renderSpeaking();
+      });
+
+      document.getElementById("hearQuestionBtn").addEventListener("click", function () {
+        var p = SPEAKING_PROMPTS[state.speakTurnIndex];
+        speakText(p.question, 0.96);
+      });
+
+      document.getElementById("toggleSpeakTextBtn").addEventListener("click", function () {
+        document.getElementById("speakQuestionText").classList.toggle("hidden");
+      });
+
+      document.getElementById("startSpeakTimerBtn").addEventListener("click", function () {
+        var btn = document.getElementById("startSpeakTimerBtn");
+        if (speakTimerHandle) {
+          stopSpeakingTimer();
+          if (speakElapsed >= 20) {
+            state.speakPracticed[String(state.speakTurnIndex)] = true;
+            saveState();
+            renderSpeaking();
+          }
+          btn.textContent = "🎙️ Start 35s Speaking Timer";
+          return;
+        }
+        speakElapsed = 0;
+        updateSpeakPhaseUI(1);
+        btn.textContent = "⏹ Stop Timer";
+        speakTimerHandle = setInterval(function () {
+          speakElapsed++;
+          updateSpeakPhaseUI(speakElapsed);
+          if (speakElapsed >= 35) {
+            stopSpeakingTimer();
+            state.speakPracticed[String(state.speakTurnIndex)] = true;
+            saveState();
+            renderSpeaking();
+            btn.textContent = "🎙️ Restart 35s Timer";
+          }
+        }, 1000);
+      });
+
+      // TAB 5B: Listen & Type Dictation
+      function gradeDictation(expected, actual) {
+        var expWords = expected.trim().split(/\s+/);
+        var actWords = actual.trim().split(/\s+/).filter(Boolean);
+        var exact = actual.trim() === expected.trim();
+        var tokensHtml = [];
+        var matches = 0;
+
+        for (var i = 0; i < expWords.length; i++) {
+          var ew = expWords[i];
+          var aw = actWords[i] || "";
+          if (aw === ew) {
+            matches++;
+            tokensHtml.push('<span class="diff-token diff-ok">' + escapeHtml(ew) + "</span>");
+          } else {
+            var shown = aw ? (aw + " ➔ " + ew) : ("[missing: " + ew + "]");
+            tokensHtml.push('<span class="diff-token diff-miss">' + escapeHtml(shown) + "</span>");
+          }
+        }
+        if (actWords.length > expWords.length) {
+          for (var j = expWords.length; j < actWords.length; j++) {
+            tokensHtml.push('<span class="diff-token diff-extra">' + escapeHtml(actWords[j]) + "</span>");
+          }
+        }
+
+        return {
+          exact: exact,
+          matches: matches,
+          total: expWords.length,
+          html: tokensHtml.join(" ")
+        };
+      }
+
+      function renderDictation() {
+        var container = document.getElementById("dictationContainer");
+        container.innerHTML = "";
+        var perfectCount = 0;
+        var checkedCount = 0;
+
+        DICTATION_ITEMS.forEach(function (item, idx) {
+          var box = document.createElement("div");
+          box.className = "dictation-item";
+
+          var top = document.createElement("div");
+          top.style.display = "flex";
+          top.style.flexWrap = "wrap";
+          top.style.justifyContent = "space-between";
+          top.style.alignItems = "center";
+          top.style.gap = "8px";
+
+          var title = document.createElement("strong");
+          title.textContent = "Sentence " + (idx + 1) + " of " + DICTATION_ITEMS.length;
+          top.appendChild(title);
+
+          var controls = document.createElement("div");
+          controls.style.display = "flex";
+          controls.style.gap = "6px";
+          controls.style.flexWrap = "wrap";
+
+          var playsLeft = typeof state.dictationPlays[item.id] === "number" ? state.dictationPlays[item.id] : 3;
+
+          var playBtn = document.createElement("button");
+          playBtn.className = "btn btn-sm btn-primary";
+          playBtn.type = "button";
+          playBtn.disabled = playsLeft <= 0;
+          playBtn.textContent = "🔊 Play Audio (" + playsLeft + " left)";
+          playBtn.addEventListener("click", function () {
+            if (state.dictationPlays[item.id] > 0) {
+              speakText(item.sentence, 0.94);
+              state.dictationPlays[item.id]--;
+              saveState();
+              renderDictation();
+            }
+          });
+
+          var flashBtn = document.createElement("button");
+          flashBtn.className = "btn btn-sm";
+          flashBtn.type = "button";
+          flashBtn.textContent = "Muted? Flash 3s";
+
+          var flashArea = document.createElement("div");
+          flashArea.className = "callout hidden";
+          flashArea.style.marginTop = "8px";
+          flashArea.textContent = item.sentence;
+
+          flashBtn.addEventListener("click", function () {
+            flashArea.classList.remove("hidden");
+            setTimeout(function () {
+              flashArea.classList.add("hidden");
+            }, 3000);
+          });
+
+          controls.appendChild(playBtn);
+          controls.appendChild(flashBtn);
+          top.appendChild(controls);
+          box.appendChild(top);
+          box.appendChild(flashArea);
+
+          var inp = document.createElement("input");
+          inp.type = "text";
+          inp.className = "dictation-input";
+          inp.placeholder = "Type exactly what you hear (capital letter + final period)...";
+          inp.value = state.dictationInputs[item.id] || "";
+          inp.addEventListener("input", function (ev) {
+            state.dictationInputs[item.id] = ev.target.value;
+            saveState();
+          });
+          box.appendChild(inp);
+
+          var actionRow = document.createElement("div");
+          actionRow.style.display = "flex";
+          actionRow.style.gap = "8px";
+          actionRow.style.alignItems = "center";
+
+          var checkBtn = document.createElement("button");
+          checkBtn.className = "btn btn-green btn-sm";
+          checkBtn.type = "button";
+          checkBtn.textContent = "✓ Check Sentence";
+          checkBtn.addEventListener("click", function () {
+            state.dictationChecked[item.id] = true;
+            saveState();
+            renderDictation();
+          });
+
+          var resetPlaysBtn = document.createElement("button");
+          resetPlaysBtn.className = "btn btn-sm";
+          resetPlaysBtn.type = "button";
+          resetPlaysBtn.textContent = "↻ Reset Plays";
+          resetPlaysBtn.addEventListener("click", function () {
+            state.dictationPlays[item.id] = 3;
+            saveState();
+            renderDictation();
+          });
+
+          actionRow.appendChild(checkBtn);
+          actionRow.appendChild(resetPlaysBtn);
+          box.appendChild(actionRow);
+
+          if (state.dictationChecked[item.id]) {
+            checkedCount++;
+            var res = gradeDictation(item.sentence, state.dictationInputs[item.id] || "");
+            if (res.exact) perfectCount++;
+
+            var diffBox = document.createElement("div");
+            diffBox.style.marginTop = "10px";
+            diffBox.style.padding = "10px";
+            diffBox.style.borderRadius = "8px";
+            diffBox.style.background = "var(--slate-bg)";
+            diffBox.innerHTML =
+              '<div style="margin-bottom:4px; font-size:13px;"><strong>' +
+              (res.exact ? "✅ Exact match!" : "Word Check (" + res.matches + "/" + res.total + " exact):") +
+              "</strong> " + escapeHtml(item.focus) + "</div><div>" + res.html + "</div>";
+            box.appendChild(diffBox);
+          }
+
+          container.appendChild(box);
+        });
+
+        document.getElementById("dictationScorePill").textContent = perfectCount + " / 4 Perfect";
+        checkSpeakingModuleComplete(checkedCount);
+      }
+
+      function checkSpeakingModuleComplete(checkedDictations) {
+        var practiced = Object.keys(state.speakPracticed).filter(function (k) {
+          return state.speakPracticed[k];
+        }).length;
+        var dictChecked = typeof checkedDictations === "number"
+          ? checkedDictations
+          : Object.keys(state.dictationChecked).filter(function (k) { return state.dictationChecked[k]; }).length;
+        if (practiced >= 2 && dictChecked >= 4 && !state.completedModules.speaking) {
+          markModuleDone("speaking", true);
+        }
+      }
+
+      document.getElementById("markSpeakingBtn").addEventListener("click", function () {
+        markModuleDone("speaking", !state.completedModules.speaking);
+      });
+
+      // Utilities
+      function formatClock(totalSeconds) {
+        var m = Math.floor(totalSeconds / 60);
+        var s = totalSeconds % 60;
+        return (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+      }
+
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function renderAll() {
+        renderChecklist();
+        renderVocab();
+        renderCTest();
+        renderWriting();
+        renderSpeaking();
+        renderDictation();
+        updateModuleHeader();
+      }
+
+      renderAll();
+
+      var hashTab = (window.location.hash || "").replace("#", "");
+      if (hashTab && document.getElementById("tab-" + hashTab)) {
+        switchTab(hashTab, false);
+      } else {
+        switchTab(state.activeTab || "overview", false);
+      }
+    })();
+  </script>
+</body>
+</html>
